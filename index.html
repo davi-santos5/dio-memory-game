@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/e541811050.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <title>Jogo da memória</title>
+</head>
+<body>
+    <main class="memory-game">
+        <div class="controls">
+            <div class="chronometer">
+                <h2>TIME:</h2>
+                <p class="clock">00:00</p>
+            </div>
+            <button id="reset">
+                <i class="fas fa-undo-alt"></i>
+                <p>RESET</p>
+            </button>
+        </div>
+
+        <div class="board">
+            <div class="card" data-card="bowser">
+                <img class="card-front" src="./img/bowser.jpg" alt="Face da carta bowser">
+                <img class="card-back" src="./img/box.png" alt="Verso da carta">
+            </div>
+            <div class="card" data-card="luigi">
+                <img class="card-front" src="./img/luigi.png" alt="Face da carta luigi">
+                <img class="card-back" src="./img/box.png" alt="Verso da carta">
+            </div>
+            <div class="card" data-card="mario">
+                <img class="card-front" src="./img/mario.png" alt="Face da carta mario">
+                <img class="card-back" src="./img/box.png" alt="Verso da carta">
+            </div>
+            <div class="card" data-card="peach">
+                <img class="card-front" src="./img/peach.png" alt="Face da carta peach">
+                <img class="card-back" src="./img/box.png" alt="Verso da carta">
+            </div>
+            <div class="card" data-card="toad">
+                <img class="card-front" src="./img/toad.png" alt="Face da carta toad">
+                <img class="card-back" src="./img/box.png" alt="Verso da carta">
+            </div>
+            <div class="card" data-card="yoshi">
+                <img class="card-front" src="./img/yoshi.png" alt="Face da carta yoshi">
+                <img class="card-back" src="./img/box.png" alt="Verso da carta">
+            </div>
+            <div class="card" data-card="bowser">
+                <img class="card-front" src="./img/bowser.jpg" alt="Face da carta bowser">
+                <img class="card-back" src="./img/box.png" alt="Verso da carta">
+            </div>
+            <div class="card" data-card="luigi">
+                <img class="card-front" src="./img/luigi.png" alt="Face da carta luigi">
+                <img class="card-back" src="./img/box.png" alt="Verso da carta">
+            </div>
+            <div class="card" data-card="mario">
+                <img class="card-front" src="./img/mario.png" alt="Face da carta mario">
+                <img class="card-back" src="./img/box.png" alt="Verso da carta">
+            </div>
+            <div class="card" data-card="peach">
+                <img class="card-front" src="./img/peach.png" alt="Face da carta peach">
+                <img class="card-back" src="./img/box.png" alt="Verso da carta">
+            </div>
+            <div class="card" data-card="toad">
+                <img class="card-front" src="./img/toad.png" alt="Face da carta toad">
+                <img class="card-back" src="./img/box.png" alt="Verso da carta">
+            </div>
+            <div class="card" data-card="yoshi">
+                <img class="card-front" src="./img/yoshi.png" alt="Face da carta yoshi">
+                <img class="card-back" src="./img/box.png" alt="Verso da carta">
+            </div>
+        </div>
+
+        <div class="score">
+            <h2>SCORE:</h2>
+            <div class="tries">
+                <p class="score-tries">0</p>
+                <p>TRIES</p>
+            </div>
+        </div>  
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
