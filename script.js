@@ -65,13 +65,18 @@ function addScore() {
     score.innerHTML = tries;
 }
 
-(function shuffle() {
+function resetScore() {
+    tries = 0;
+    score.innerHTML = tries;
+}
+
+function shuffle() {
     cards.forEach(card => {
         let randomPosition = Math.floor(Math.random() * cards.length)
 
         card.style.order = randomPosition;
     })
-})();
+}
 
 function clockTime(time) {
     let min = 0;
@@ -104,20 +109,18 @@ function resetClock() {
     startClock();
 }
 
-startClock();
 
 function resetGame() {
     if(lockBoard) return;
-
-    resetBoard();
-    cards.forEach(card => {
-        let randomPosition = Math.floor(Math.random() * cards.length)
-
+    
+    cards.forEach(card => {        
         card.classList.remove('flip')
         card.addEventListener('click', flipCard)
-        card.style.order = randomPosition;
     });
-
+    
+    shuffle()
+    resetScore();
+    resetBoard();
     resetClock();
 }
 
@@ -126,3 +129,6 @@ cards.forEach((card) => {
 })
 
 reset.addEventListener('click', resetGame)
+
+shuffle();
+startClock();
