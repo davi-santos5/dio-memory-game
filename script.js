@@ -118,10 +118,10 @@ function resetGame() {
         card.addEventListener('click', flipCard)
     });
     
-    shuffle()
     resetScore();
     resetBoard();
     resetClock();
+    setTimeout(shuffle, 1000);
 }
 
 cards.forEach((card) => {
