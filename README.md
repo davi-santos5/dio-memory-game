@@ -4,7 +4,7 @@
 
 # Jogo da memória (projeto DIO)
 
-![game_gif](.\game-gif.gif)
+![game_gif](./game-gif.gif)
 
 
 
