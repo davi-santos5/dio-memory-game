@@ -1,0 +1,96 @@
+.modal-wrapper {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-wrapper.show {
+    display: flex;
+}
+
+.modal-wrapper.show .modal {
+    animation: modal-show 0.5s;
+}
+
+.modal {
+    height: 80%;
+    width: 60%;
+
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    color: #000;
+
+    position: relative;
+
+    display: grid;
+    grid-template-rows: 3fr 1fr 1fr;
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas: 
+    "star star"
+    "time-label time-value"
+    "score-label score-value";
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    border: none;
+    background-color: transparent;
+
+    font-size: 26px;
+    font-family: 'Press Start 2P', cursive;
+
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.modal-close:hover {
+    opacity: 0.6;
+}
+
+.modal img {
+    width: 400px;
+    grid-area: star;
+    margin: auto;
+    margin-bottom: 60px;
+}
+
+.modal-time {
+    grid-area: time-label;
+    text-align: right;
+}
+
+.modal-clock {
+    grid-area: time-value;
+    text-align: center;
+}
+
+.modal-score {
+    grid-area: score-label;
+    text-align-last: right;
+}
+
+.modal-tries {
+    grid-area: score-value;
+    text-align: center;
+}
+
+@keyframes modal-show {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
